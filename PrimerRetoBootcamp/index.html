@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculadora Primer Reto Bootcamp</title>
+</head>
+
+<body>
+<div class="login-page">
+    <div class="form">
+    <form>
+        <table>
+            <tr style="text-align:center;">
+                <td colspan="4">
+                    <input id="resultado" type="text" value="0" size="20"
+                        style="border: 3px solid green; padding: 10px;" /><input id="memoria" type="hidden" value="0" />
+                    <button type="button" onClick="borrar()">Limpiar</button>    
+                </td>
+            </tr>
+
+            <tr style="text-align:center;">
+                <td>
+                    <input type="button" value="7"
+                        onClick="siete()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="8"
+                        onClick="ocho()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="9"
+                        onClick="nueve()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="/" onClick="operaciones('dividir')" style="width:55px">
+                </td>
+            </tr>
+
+            <tr style="text-align:center;">
+                <td>
+                    <input type="button" value="4"
+                        onClick="cuatro()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="5"
+                        onClick="cinco()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="6"
+                        onClick="seis()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="*" onClick="operaciones('multiplicar')"
+                        style="width:55px">
+                </td>
+            </tr>
+
+            <tr style="text-align:center;">
+                <td>
+                    <input type="button" value="1"
+                        onClick="uno()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="2"
+                        onClick="dos()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="3"
+                        onClick="tres()"
+                        style="width:55px">
+                </td>
+                <td>
+                    <input type="button" value="-" onClick="operaciones('restar'); return false;" style="width:55px">
+                </td>
+            </tr>
+
+            <tr style="text-align:center;">
+                <td>
+                    <input type="button" value="0"
+                        onClick="cero"
+                        style="width:55px">
+                </td>
+                <td colspan="2">
+                    <input type="button" value="=" onClick="operaciones('igual'); return false;" style="width:110px">
+                </td>
+                <td>
+                    <input type="button" value="+" onClick="operaciones('sumar'); return false;" style="width:55px">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+</div>
+</div> 
+</body>
+<script src="script.js"></script>
+
+</html>

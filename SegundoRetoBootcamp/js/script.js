@@ -136,8 +136,9 @@ function calcular8() {
     var numeroL = document.getElementById('numeroL').value;
     var array = numeroL.toString().split(/[\s-]+/);
     var numero1 = array[0];
-    var numero2 = array[1];
-
+    var numero2 = array[2];
+    var resultado = 0;
+    
     var numeroN = {
         'zero': 0,
         'uno': 1,
@@ -160,31 +161,96 @@ function calcular8() {
         'deeciocho': 18,
         'deecinueve': 19,
         'veinte': 20,
-        'veinti': 20,
+        'veintiuno': 21,
+        'veintidos': 22,
+        'veintitres': 23,
+        'veinticuatro': 24,
+        'veinticinco': 25,
+        'veintiseis': 26,
+        'veintisiete': 27,
+        'veintiocho': 28,
+        'veintinueve': 29,
+        'treinta': 30,
+        'cuarenta': 40,
+        'cincuenta': 50,
+        'sesenta': 60,
+        'setenta': 70,
+        'ochenta': 80,
+        'noventa': 90,
+        'cien': 100,
     }
 
-    this.valorNumerico1(numeroN, numero1);
-
-    // var x = Object.keys(numeroN);
-
-    console.log(numeroN.find(this.valorNumerico1()));
-}
-
-
-function valorNumerico1(numeroN, numero1) {
     var x = Object.keys(numeroN);
+
     for (i = 0; i < x.length; i++) {
         if (numero1 === x[i]) {
-            debugger
-            x1 = x[i];
-            // console.log(numeroN.find(x[i]));
+            var x1 = x[i];
         }
-        // if(numero2 === x[i]){
-        //     debugger
-        //     console.log(x[i]);
-        // }
+        if(numero2 === x[i]){
+            var x2 = x[i];
+        }
     }
-    return x1;
+    
+    var numeroN2 = [
+        {nombre:'zero', cantidad: 0},
+        {nombre:'uno', cantidad: 1},
+        {nombre:'dos', cantidad: 2},
+        {nombre:'tre', cantidad: 3},
+        {nombre:'cuatro', cantidad: 4},
+        {nombre:'cinco', cantidad: 5},
+        {nombre:'seis', cantidad: 6},
+        {nombre:'siete', cantidad: 7},
+        {nombre:'ocho', cantidad: 8},
+        {nombre:'nueve', cantidad: 9},
+        {nombre:'diez', cantidad: 10},
+        {nombre:'once', cantidad: 11},
+        {nombre:'doce', cantidad: 12},
+        {nombre:'trece', cantidad: 13},
+        {nombre:'catorce', cantidad: 14},
+        {nombre:'quince', cantidad: 15},
+        {nombre:'dieciseis', cantidad: 16},
+        {nombre:'diecisiete', cantidad: 17},
+        {nombre:'dieciocho', cantidad: 18},
+        {nombre:'diecinueve', cantidad: 19},
+        {nombre:'veinte', cantidad: 20},
+        {nombre:'veintiuno', cantidad: 21},
+        {nombre:'veintidos', cantidad: 22},
+        {nombre:'veintitres', cantidad: 23},
+        {nombre:'veinticuatro', cantidad: 24},
+        {nombre:'veinticinco', cantidad: 25},
+        {nombre:'veintiseis', cantidad: 26},
+        {nombre:'veintisiete', cantidad: 27},
+        {nombre:'veintiocho', cantidad: 28},
+        {nombre:'veintinueve', cantidad: 29},
+        {nombre:'treinta', cantidad: 30},
+        {nombre:'cuarenta', cantidad: 40},
+        {nombre:'cincuenta', cantidad: 50},
+        {nombre:'sesenta', cantidad: 60},
+        {nombre:'setenta', cantidad: 70},
+        {nombre:'ochenta', cantidad: 80},
+        {nombre:'noventa', cantidad: 90},
+        {nombre:'cien', cantidad: 100},
+    ];
+
+    function escritoanum1(numeroo) { 
+        if(x1 === undefined){
+            return numeroo.nombre === "zero";
+        }else{
+            return numeroo.nombre === x1;
+        }
+    }
+
+    function escritoanum2(numeroo) { 
+        if(x2 === undefined){
+            return numeroo.nombre === "zero";
+        }else{
+            return numeroo.nombre === x2;
+        }
+    }
+
+    resultado = numeroN2.find(escritoanum1).cantidad + numeroN2.find(escritoanum2).cantidad;
+    document.getElementById('resultado7').value = resultado;
+
 }
 
 function calcular9() {
@@ -249,36 +315,243 @@ function calcular11() {
     var num4 = document.getElementById('num4').value;
 
     var resultado = parseInt(num1 + num2 + num3 + num4)
-    var resultado2 = Math.floor(resultado);
+    var resultado2 = Math.round10(resultado, 2);
 
     document.getElementById('resultado9').value = resultado2;
 }
 
+(function () {
+    function decimalAdjust(type, value, exp) {
+        if (typeof exp === 'undefined' || +exp === 0) {
+            return Math[type](value);
+        }
+        value = +value;
+        exp = +exp;
+        if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+            return NaN;
+        }
+        value = value.toString().split('e');
+        value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+        value = value.toString().split('e');
+        return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+    }
+
+    if (!Math.round10) {
+        Math.round10 = function (value, exp) {
+            return decimalAdjust('round', value, exp);
+        };
+    }
+})();
+
+function calcular12() {
+    var fechaN = document.getElementById('fechaN').value;
+    var array = fechaN.split("-");
+    var dia = parseInt(array[0]);
+    var mes = parseInt(array[1]);
+    var ano = parseInt(array[2]);
+    var hoy = new Date();
+    var dd = hoy.getDate() + 1;
+    var mm = hoy.getMonth() + 1;
+    var yyyy = hoy.getFullYear();
+
+    var resultado1 = yyyy - ano;
+    var resultado2 = mm - mes;
+    var resultado3 = dd - dia;
+
+    if (ano === yyyy) {
+        document.getElementById('resultado10').value = resultado2 + " meses" + " y " + resultado3 + " dias";
+    } else {
+        document.getElementById('resultado10').value = resultado1 + " años";
+    }
+}
+
+function calcular13() {
+    var variables = document.getElementById('variables').value;
+    var array = variables.split(",");
+    var a = parseInt(array[0]);
+    var b = parseInt(array[1]);
+    var c = parseInt(array[2]);
+    var d = parseInt(array[3]);
+    var e = parseInt(array[4]);
+    var f = parseInt(array[5]);
+
+    var x = (c * e - b * f) / (a * e - b * d);
+    var y = (a * f - c * d) / (a * e - b * d);
+
+    document.getElementById('resultado11').value = x;
+    document.getElementById('resultado12').value = y;
+
+}
+
+function calcular14() {
+    var fechaB = document.getElementById('bisiesto').value;
+    var year = parseInt(fechaB);
+
+    var bisiesto = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? true : false;
+
+    if (bisiesto === true) {
+        document.getElementById('resultado13').value = "año es bisiesto";
+    } else {
+        document.getElementById('resultado13').value = "año no es bisiesto";
+    }
+
+}
+
+function calcular15() {
+    var mess = document.getElementById('horaas').value;
+    var anoo = document.getElementById('anoo').value;
+    var mes = parseInt(mess);
+    var ano = parseInt(anoo);
+
+    resultado = new Date(ano, mes, 0).getDate()
+
+    document.getElementById('resultado14').value = resultado;
+}
+
+function calcular16() {
+    var valorhora = document.getElementById('valorhora').value;
+    var horassemana = document.getElementById('horassemana').value;
+    var horasextra = document.getElementById('horasextra').value;
+
+    var vhora = parseInt(valorhora);
+    var horass = parseInt(horassemana);
+    var horasextra = parseInt(horasextra);
+
+    if (horass < 40) {
+        var resultado = horass * vhora;
+        if (resultado < (vhora * 40)) {
+            document.getElementById('resultado15').value = resultado;
+            document.getElementById('impuestos').value = "No aplica";
+        }
+    }
+
+    if (horass > 40) {
+
+        var resultado = (horass * vhora) + ((horasextra * vhora * 50)/100);
+
+        if (resultado > (vhora * 40)) {
+            var resultado2 = resultado + ((resultado * 10) / 100);
+            document.getElementById('resultado15').value = resultado2;
+            document.getElementById('impuestos').value = "10%";
+        }
+    }
+
+}
+
+function calcular17() {
+    var monto = document.getElementById('monto').value;
+    var montoo = parseInt(monto);
+
+    var billetemoneda = [100000, 50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50];
+
+    for (i = 0; i < billetemoneda.length; i++) {
+        if (montoo >= billetemoneda[i]) {
+            if(billetemoneda[i] === 100000){
+                var billetes100 = montoo/billetemoneda[i];
+                if(billetes100 === 1){
+                    document.getElementById('resultado16').value = billetes100 + " billete de 100 mil";
+                }else{
+                    document.getElementById('resultado16').value = billetes100 + " billetes de 100 mil";
+                }
+            }   
+            if(billetemoneda[i] === 50000){
+                var billetes50 = montoo/billetemoneda[i];
+                if(billetes50 === 1){
+                    document.getElementById('resultado17').value = billetes50 + " billete de 50 mil";
+                }else{
+                    document.getElementById('resultado17').value = billetes50 + " billetes de 50";
+                }
+            } 
+            if(billetemoneda[i] === 20000){
+                var billetes20 = montoo/billetemoneda[i];
+                if(billetes20 === 1){
+                    document.getElementById('resultado18').value = billetes20 + " billete de 20 mil";
+                }else{
+                    document.getElementById('resultado18').value = billetes20 + " billetes de 20 mil";
+                }
+            } 
+            if(billetemoneda[i] === 10000){
+                var billetes10 = montoo/billetemoneda[i];
+                if(billetes10 === 1){
+                    document.getElementById('resultado19').value = billetes10 + " billete de 10 mil";
+                }else{
+                    document.getElementById('resultado19').value = billetes10 + " billetes de 10 mil";
+                }
+            } 
+            if(billetemoneda[i] === 5000){
+                var billetes5 = montoo/billetemoneda[i];
+                if(billetes5 === 1){
+                    document.getElementById('resultado20').value = billetes5 + " billete de 5 mil";
+                }else{
+                    document.getElementById('resultado20').value = billetes5 + " billetes de 5 mil";
+                }
+            } 
+            if(billetemoneda[i] === 2000){
+                var billetes2 = montoo/billetemoneda[i];
+                if(billetes2 === 1){
+                    document.getElementById('resultado21').value = billetes2 + " billete de 2 mil";
+                }else{
+                    document.getElementById('resultado21').value = billetes2 + " billetes de 2 mil";
+                }
+            } 
+            if(billetemoneda[i] === 1000){
+                var billetes1 = montoo/billetemoneda[i];
+                if(billetes1 === 1){
+                    document.getElementById('resultado22').value = billetes1 + " billete de mil";
+                }else{
+                    document.getElementById('resultado22').value = billetes1 + " billetes de mil";
+                }
+            } 
+            if(billetemoneda[i] === 500){
+                var moneda500 = montoo/billetemoneda[i];
+                if(moneda500 === 1){
+                    document.getElementById('resultado23').value = moneda500 + " moneda de 500";
+                }else{
+                    document.getElementById('resultado23').value = moneda500 + " monedas de 500";
+                }
+            }   
+            if(billetemoneda[i] === 200){
+                var moneda200 = montoo/billetemoneda[i];
+                if(moneda200 === 1){
+                    document.getElementById('resultado24').value = moneda200 + " moneda de 200";
+                }else{
+                    document.getElementById('resultado24').value = moneda200 + " monedas de 200";
+                }
+            }   
+            if(billetemoneda[i] === 100){
+                var moneda100 = montoo/billetemoneda[i];
+                if(moneda100 === 1){
+                    document.getElementById('resultado25').value = moneda100 + " moneda de 100";
+                }else{
+                    document.getElementById('resultado25').value = moneda100 + " monedas de 100";
+                }
+            }   
+            if(billetemoneda[i] === 50){
+                var moneda50 = montoo/billetemoneda[i];
+                if(moneda50 === 1){
+                    document.getElementById('resultado26').value = moneda50 + " moneda de 50";
+                }else{
+                    document.getElementById('resultado26').value = moneda50 + " monedas de 50";
+                }
+            }   
+        }
+    }
+}
+
+function calcular18() {
+   var numero = document.getElementById('numerof').value;
+   var num = parseInt(numero);
+   if(num > 0){
+    document.getElementById('resultado27').value = "Positivo";
+   }
+   if(num === 0){
+    document.getElementById('resultado27').value = "Igual a cero";
+   }
+   if(num < 0){
+    document.getElementById('resultado27').value = "Negativo";
+   }
+}
+
 function borrar() {
-    document.getElementById('numeros').value = "";
-    document.getElementById('media').value = "";
-    document.getElementById('puntuacion').value = "";
-    document.getElementById('masa1').value = "";
-    document.getElementById('masa2').value = "";
-    document.getElementById('distancia').value = "";
-    document.getElementById('resultado').value = "";
-    document.getElementById('masa').value = "";
-    document.getElementById('resultado2').value = "";
-    document.getElementById('ladoa').value = "";
-    document.getElementById('ladob').value = "";
-    document.getElementById('resultado3').value = "";
-    document.getElementById('lado1').value = "";
-    document.getElementById('lado2').value = "";
-    document.getElementById('lado3').value = "";
-    document.getElementById('resultado4').value = "";
-    document.getElementById('hora').value = "";
-    document.getElementById('resultado5').value = "";
-    document.getElementById('fechaU').value = "";
-    document.getElementById('resultado6').value = "";
-    document.getElementById('radio').value = "";
-    document.getElementById('circunferencia').value = "";
-    document.getElementById('area').value = "";
-    document.getElementById('diametro').value = "";
-    document.getElementById('numero').value = "";
-    document.getElementById('resultado8').value = "";
+    location.reload();
 }

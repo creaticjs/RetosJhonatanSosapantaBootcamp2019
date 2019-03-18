@@ -29,7 +29,7 @@
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Jhonatan Sosapanta</span>
             <span class="d-none d-lg-block">
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/perfil.png" alt="">
             </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -39,14 +39,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Retos 2 y 3</a>
+                    <a class="nav-link js-scroll-trigger" href="#about">Retos Bootcamp 2019</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#reto2">Reto 2</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#reto3">Reto 3</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -134,8 +134,7 @@
                             <h5> Aplicando la formula</h5>
                             <h6> F = m*c^2</h6>
                             <div class="row">
-                                <div class="col-md-4"><input id="resultado2" placeholder="Resultado en ergios"
-                                        disabled /></div>
+                                <div class="col-md-4"><input id="resultado2" placeholder="Resultado en ergios" disabled /></div>
                                 <div class="col-md-12"><br></div>
                                 <div class="col-md-2"><button onClick="calcular3()">Calcular</button></div>
                                 <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
@@ -178,8 +177,7 @@
                             <h6> p = (a+b+c)/2</h6>
                             <h6> A = (p*(p-a)*(p-b)*(p-c))^1/2</h6>
                             <div class="row">
-                                <div class="col-md-4"><input id="resultado4" placeholder="Resultado del area"
-                                        disabled /></div>
+                                <div class="col-md-4"><input id="resultado4" placeholder="Resultado del area" disabled /></div>
                                 <div class="col-md-12"><br></div>
                                 <div class="col-md-2"><button onClick="calcular5()">Calcular</button></div>
                                 <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
@@ -191,7 +189,8 @@
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 6</h3>
-                        <div class="subheading mb-3">Programa para convertir la hora de formato de 24 horas a formato de
+                        <div class="subheading mb-3">Programa para convertir la hora de formato de 24 horas a formato
+                            de
                             12 horas
                         </div>
                         <div class="container">
@@ -255,8 +254,7 @@
                         </div>
                         <div class="container">
                             <h5> Radio <input id="radio" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Circunferencia del circulo <input id="circunferencia" placeholder="Resultado"
-                                    disabled /></h5>
+                            <h5> Circunferencia del circulo <input id="circunferencia" placeholder="Resultado" disabled /></h5>
                             <h5> Area del circulo <input id="area" placeholder="Resultado" disabled /></h5>
                             <h5> Diametro del circulo <input id="diametro" placeholder="Resultado" disabled /></h5>
                             <div class="row">
@@ -287,31 +285,176 @@
                 </div>
 
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-0">Problema 11</h3>
-                            <div class="subheading mb-3">Programa aproximar numeros al malor mas cercano
-                            </div>
-                            <div class="container">
-                                <h5> Numero 1 <input id="num1" placeholder="Ingrese el numero aquí" /></h5>
-                                <h5> Numero 2 <input id="num2" placeholder="Ingrese el numero aquí" /></h5>
-                                <h5> Numero 3 <input id="num3" placeholder="Ingrese el numero aquí" /></h5>
-                                <h5> Numero 4 <input id="num4" placeholder="Ingrese el numero aquí" /></h5>
-                                <h5> Conversión String en numero</h5>
-                                <div class="row">
-                                    <div class="col-md-4"><input id="resultado9" placeholder="Resultado" disabled /></div>
-                                    <div class="col-md-12"><br></div>
-                                    <div class="col-md-2"><button onClick="calcular11()">Calcular</button></div>
-                                    <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                                </div>
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 11</h3>
+                        <div class="subheading mb-3">Programa aproximar numeros al mayor valor mas cercano
+                        </div>
+                        <div class="container">
+                            <h5> Numero 1 <input id="num1" placeholder="Ingrese el numero aquí" /></h5>
+                            <h5> Numero 2 <input id="num2" placeholder="Ingrese el numero aquí" /></h5>
+                            <h5> Numero 3 <input id="num3" placeholder="Ingrese el numero aquí" /></h5>
+                            <h5> Numero 4 <input id="num4" placeholder="Ingrese el numero aquí" /></h5>
+                            <h5> Numero aproximado</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado9" placeholder="Resultado" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="calcular11()">Calcular</button></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 12</h3>
+                        <div class="subheading mb-3">Programa para calcular la edad
+                        </div>
+                        <div class="container">
+                            <h5> Fecha de nacimiento</h5>
+                            <h5> Fecha <input id="fechaN" placeholder="dia-mes-año" /></h5>
+                            <h5> Edad del usuario</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado10" placeholder="Resultado" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="calcular12()">Calcular</button></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 13</h3>
+                        <div class="subheading mb-3">Programa para calcular las siguientes ecuaciones lineales
+                        </div>
+                        <div class="container">
+                            <h5> Ecuaciones lineales</h5>
+                            <h5> ax+by=c</h5>
+                            <h5> dx+ey=f</h5>
+                            <h5> Variables <input id="variables" placeholder="a,b,c,d,e,f" /></h5>
+                            <h5> x = (ce - bf)/ (ae - bd)</h5>
+                            <h5> y = (af - cd)/ (ae - bd)</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado11" placeholder="Valor de x" disabled /></div>
+                                <div class="col-md-4"><input id="resultado12" placeholder="Valor de y" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="calcular13()">Calcular</button></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 14</h3>
+                        <div class="subheading mb-3">Programa para determinar si un año es bisiesto
+                        </div>
+                        <div class="container">
+                            <h5> Año <input id="bisiesto" placeholder="año bisiesto" /></h5>
+                            <h5> Calcular si es bisiesto</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado13" placeholder="resultado" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="calcular14()">Calcular</button></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 15</h3>
+                        <div class="subheading mb-3">Programa para calcular el numero de dias de un mes
+                        </div>
+                        <div class="container">
+                            <h5> Mes <input id="mess" placeholder="Ingrese el mes" /></h5>
+                            <h5> Año <input id="anoo" placeholder="Ingrese el año" /></h5>
+                            <h5> Calcular el numero de dias del mes</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado14" placeholder="resultado" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="calcular15()">Calcular</button></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 16</h3>
+                        <div class="subheading mb-3">Programa para calcular el salario neto semanal
+                        </div>
+                        <div class="container">
+                            <h5> Valor hora <input id="valorhora" placeholder="Valor hora" /></h5>
+                            <h5> Horas semanales <input id="horassemana" placeholder="Ingrese las horas" /></h5>
+                            <h5> Horas extras <input id="horasextra" placeholder="Ingrese las horas" /></h5>
+                            <h5> Impuestos <input id="impuestos" placeholder="¿Aplica o no Aplica?" disabled /></h5>
+                            <h5> Salario del trabajador</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado15" placeholder="resultado" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="calcular16()">Calcular</button></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 17</h3>
+                        <div class="subheading mb-3">Programa para obtener el cambio optimo
+                        </div>
+                        <div class="container">
+                            <h5> Valor a descambiar <input id="monto" placeholder="Ingrese el monto" /></h5>
+                            <h5> Cambio mas optimo</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado16" placeholder="billetes de 100000" disabled /></div>
+                                <div class="col-md-4"><input id="resultado17" placeholder="billetes de 50000" disabled /></div>
+                                <div class="col-md-4"><input id="resultado18" placeholder="billetes de 20000" disabled /></div>
+                                <div class="col-md-4"><input id="resultado19" placeholder="billetes de 10000" disabled /></div>
+                                <div class="col-md-4"><input id="resultado20" placeholder="billetes de 5000" disabled /></div>
+                                <div class="col-md-4"><input id="resultado21" placeholder="billetes de 2000" disabled /></div>
+                                <div class="col-md-4"><input id="resultado22" placeholder="billetes de 1000" disabled /></div>
+                                <div class="col-md-4"><input id="resultado23" placeholder="monedas de 500" disabled /></div>
+                                <div class="col-md-4"><input id="resultado24" placeholder="monedas de 200" disabled /></div>
+                                <div class="col-md-4"><input id="resultado25" placeholder="monedas de 100" disabled /></div>
+                                <div class="col-md-4"><input id="resultado26" placeholder="monedas de 50" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="calcular17()">Calcular</button></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 18</h3>
+                        <div class="subheading mb-3">Programa para determinar si el numero introducido por teclado es positivo, igual a cero o negativo
+                        </div>
+                        <div class="container">
+                            <h5> Numero <input id="numerof" onkeyup="calcular18()" placeholder="Ingrese el numero aquí" /></h5>
+                            <h5> El numero presionado es</h5>
+                            <div class="row">
+                                <div class="col-md-4"><input id="resultado27" placeholder="resultado" disabled /></div>
+                                <div class="col-md-12"><br></div>
+                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <hr class="m-0">
 
-        <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="reto3">
+        <!-- <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="reto3">
             <div class="w-100">
                 <h2 class="mb-5">Reto 3</h2>
 
@@ -319,7 +462,7 @@
 
             </div>
 
-        </section>
+        </section> -->
 
     </div>
 

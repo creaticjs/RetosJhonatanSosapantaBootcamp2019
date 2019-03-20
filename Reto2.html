@@ -48,9 +48,6 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="Reto2.html">Reto 2</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#reto3">Reto 3</a>
-                </li> -->
             </ul>
         </div>
     </nav>
@@ -59,7 +56,7 @@
 
         <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="reto2">
             <div class="w-100">
-                <h2 class="mb-5">Reto 2</h2>
+                <h2 class="mb-5">EJERCICIOS DE PROGRAMACIÓN</h2>
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 1</h3>
@@ -91,20 +88,39 @@
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 2</h3>
                         <div class="subheading mb-3">Programa para calcular la fuerza de atracción entre dos masas</div>
-                        <div class="container">
-                            <h5> Masa 1 <input id="masa1" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> Masa 2 <input id="masa2" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> distacia <input id="distancia" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> Gravedad <input placeholder="6.673 x 10^-8 cm^3/g.seg^2" disabled /></h5>
-                            <h5> Aplicando la formula</h5>
-                            <h6> F = (G*m1*m1)/d^2</h6>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado" placeholder="Resultado en dinas" disabled />
-                                </div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular2()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <h5> Formula: <span class="text-primary">F = (G*m1*m1)/d^2</span> </h5>
+                        <h6> </h6>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Masa 1</label>
+                            <input type="text" class="form-control" id="masa1" placeholder="Ingrese el valor aquí">
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Masa 2</label>
+                            <input type="text" class="form-control" id="masa2" placeholder="Ingrese el valor aquí">
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Distancia</label>
+                            <input type="text" class="form-control" id="distancia" placeholder="Ingrese el valor aquí">
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Gravedad</label>
+                            <input type="text" class="form-control" placeholder="6.673 x 10^-8 cm^3/g.seg^2" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Resultado</label>
+                            <input type="text" class="form-control" id="resultado" placeholder="Resultado en dinas"
+                                disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular2()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -112,17 +128,28 @@
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 3</h3>
                         <div class="subheading mb-3">Programa para conversión de una masa m en energia</div>
-                        <div class="container">
-                            <h5> Masa <input id="masa" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> velocidad de la luz <input placeholder="2.997925*10^10 m/sg" disabled /></h5>
-                            <h5> Aplicando la formula</h5>
-                            <h6> F = m*c^2</h6>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado2" placeholder="Resultado en ergios" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular3()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <h5> Formula: <span class="text-primary">F = m*c^2</span> </h5>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Masa</label>
+                            <input type="text" class="form-control" id="masa" placeholder="Ingrese el valor aquí">
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Velocidad de la luz </label>
+                            <input type="text" class="form-control" placeholder="2.997925*10^10 m/sg" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Resultado</label>
+                            <input type="text" class="form-control" id="resultado2" placeholder="Resultado en dinas"
+                                disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular3()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -132,18 +159,28 @@
                         <h3 class="mb-0">Problema 4</h3>
                         <div class="subheading mb-3">Programa para calcular la hipotenusa
                         </div>
-                        <div class="container">
-                            <h5> Lado a <input id="ladoa" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> Lado b <input id="ladob" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> Aplicando la formula</h5>
-                            <h6> a^2 + b^2 = h^2</h6>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado3" placeholder="Resultado de la hipotenusa"
-                                        disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular4()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <h5> Formula: <span class="text-primary">a^2 + b^2 = h^2</span> </h5>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Lado A </label>
+                            <input type="text" class="form-control" id="ladoa" placeholder="Ingrese el valor aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Lado B </label>
+                            <input type="text" class="form-control" id="ladob" placeholder="Ingrese el valor aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Resultado</label>
+                            <input type="text" class="form-control" id="resultado3" placeholder="Resultado en dinas"
+                                disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular4()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -153,19 +190,33 @@
                         <h3 class="mb-0">Problema 5</h3>
                         <div class="subheading mb-3">Programa para calcular el area de un triangulo
                         </div>
-                        <div class="container">
-                            <h5> Lado a <input id="lado1" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> Lado b <input id="lado2" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> Lado c <input id="lado3" placeholder="Ingrese el valor aquí" /></h5>
-                            <h5> Aplicando la formula</h5>
-                            <h6> p = (a+b+c)/2</h6>
-                            <h6> A = (p*(p-a)*(p-b)*(p-c))^1/2</h6>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado4" placeholder="Resultado del area" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular5()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <h5> Formula: <span class="text-primary">A = (p*(p-a)*(p-b)*(p-c))^1/2</span> </h5>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Lado A </label>
+                            <input type="text" class="form-control" id="lado1" placeholder="Ingrese el valor aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Lado B </label>
+                            <input type="text" class="form-control" id="lado2" placeholder="Ingrese el valor aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Lado C </label>
+                            <input type="text" class="form-control" id="lado3" placeholder="Ingrese el valor aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Resultado</label>
+                            <input type="text" class="form-control" id="resultado4" placeholder="Resultado del area"
+                                disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular5()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -173,21 +224,23 @@
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 6</h3>
-                        <div class="subheading mb-3">Programa para convertir la hora de formato de 24 horas a formato
-                            de
-                            12 horas
+                        <div class="subheading mb-3">Programa para convertir la hora A formato de 12 horas
                         </div>
-                        <div class="container">
-                            <h5> Hora en formato de 24 horas</h5>
-                            <h5> Hora <input id="hora" placeholder="Ingrese la hora aquí" /></h5>
-                            <h5> Hora en formato de 12 horas</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado5" placeholder="Formato 24 horas" disabled />
-                                </div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular6()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">hora en formato de 24 horas </label>
+                            <input type="text" class="form-control" id="hora" placeholder="Ingrese el hora aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">hora en formato de 12 horas </label>
+                            <input type="text" class="form-control" id="resultado5" placeholder="resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular6()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -197,16 +250,21 @@
                         <h3 class="mb-0">Problema 7</h3>
                         <div class="subheading mb-3">Convertir formato fecha usual a tres valores numericos
                         </div>
-                        <div class="container">
-                            <h5> Fecha usual</h5>
-                            <h5> Fecha <input id="fechaU" placeholder="Ingrese la fecha aquí" /></h5>
-                            <h5> Fecha transformada en tres valores</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado6" placeholder="Resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular7()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Formato fecha usual</label>
+                            <input type="text" class="form-control" id="fechaU" placeholder="Ingrese la fecha aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Formato en tres valores numericos</label>
+                            <input type="text" class="form-control" id="resultado6" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular7()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -216,16 +274,21 @@
                         <h3 class="mb-0">Problema 8</h3>
                         <div class="subheading mb-3">Convertir un string a numero
                         </div>
-                        <div class="container">
-                            <h5> Numero en letras</h5>
-                            <h5> Numero <input id="numeroL" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Conversión String en numero</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado7" placeholder="Resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular8()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero en letras</label>
+                            <input type="text" class="form-control" id="numeroL" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="resultado7" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular8()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -233,18 +296,35 @@
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 9</h3>
-                        <div class="subheading mb-3">Leer radio de un circulo y visualizar circunferencia, area y
+                        <div class="subheading mb-3">Calcular la circunferencia, area y
                             diametro del circulo
                         </div>
-                        <div class="container">
-                            <h5> Radio <input id="radio" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Circunferencia del circulo <input id="circunferencia" placeholder="Resultado" disabled /></h5>
-                            <h5> Area del circulo <input id="area" placeholder="Resultado" disabled /></h5>
-                            <h5> Diametro del circulo <input id="diametro" placeholder="Resultado" disabled /></h5>
-                            <div class="row">
-                                <div class="col-md-2"><button onClick="calcular9()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Radio</label>
+                            <input type="text" class="form-control" id="radio" placeholder="Ingrese el valor del radio aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Circunferencia del circulo</label>
+                            <input type="text" class="form-control" id="circunferencia" placeholder="Resultado"
+                                disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Area del circulo</label>
+                            <input type="text" class="form-control" id="area" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Diametro del circulo</label>
+                            <input type="text" class="form-control" id="diametro" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular9()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -252,18 +332,23 @@
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 10</h3>
-                        <div class="subheading mb-3">Programa que lee un numero normal y lo transforma en numeros
-                            romanos
+                        <div class="subheading mb-3">Programa que transforma un numero normal a romano
                         </div>
-                        <div class="container">
-                            <h5> Numero <input id="numero" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Conversión a numeros romanos</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado8" placeholder="Resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular10()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="numero" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Conversión a numero romano</label>
+                            <input type="text" class="form-control" id="resultado8" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular10()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -273,18 +358,36 @@
                         <h3 class="mb-0">Problema 11</h3>
                         <div class="subheading mb-3">Programa aproximar numeros al mayor valor mas cercano
                         </div>
-                        <div class="container">
-                            <h5> Numero 1 <input id="num1" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Numero 2 <input id="num2" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Numero 3 <input id="num3" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Numero 4 <input id="num4" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> Numero aproximado</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado9" placeholder="Resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular11()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero 1</label>
+                            <input type="text" class="form-control" id="num1" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero 2</label>
+                            <input type="text" class="form-control" id="num2" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero 3</label>
+                            <input type="text" class="form-control" id="num3" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero 4</label>
+                            <input type="text" class="form-control" id="num4" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Resultado</label>
+                            <input type="text" class="form-control" id="resultado9" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular11()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -294,16 +397,21 @@
                         <h3 class="mb-0">Problema 12</h3>
                         <div class="subheading mb-3">Programa para calcular la edad
                         </div>
-                        <div class="container">
-                            <h5> Fecha de nacimiento</h5>
-                            <h5> Fecha <input id="fechaN" placeholder="dia-mes-año" /></h5>
-                            <h5> Edad del usuario</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado10" placeholder="Resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular12()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Fecha de nacimiento</label>
+                            <input type="text" class="form-control" id="fechaN" placeholder="dia-mes-año" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Edad del usuario</label>
+                            <input type="text" class="form-control" id="resultado10" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular12()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -313,20 +421,29 @@
                         <h3 class="mb-0">Problema 13</h3>
                         <div class="subheading mb-3">Programa para calcular las siguientes ecuaciones lineales
                         </div>
-                        <div class="container">
-                            <h5> Ecuaciones lineales</h5>
-                            <h5> ax+by=c</h5>
-                            <h5> dx+ey=f</h5>
-                            <h5> Variables <input id="variables" placeholder="a,b,c,d,e,f" /></h5>
-                            <h5> x = (ce - bf)/ (ae - bd)</h5>
-                            <h5> y = (af - cd)/ (ae - bd)</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado11" placeholder="Valor de x" disabled /></div>
-                                <div class="col-md-4"><input id="resultado12" placeholder="Valor de y" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular13()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <h5> Ecuaciones</h5>
+                        <h5> <span class="text-primary">x = (ce - bf)/ (ae - bd)</span> </h5>
+                        <h5> <span class="text-primary">y = (af - cd)/ (ae - bd)</span> </h5>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Fecha de nacimiento</label>
+                            <input type="text" class="form-control" id="variables" placeholder="a,b,c,d,e,f" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Valor de x</label>
+                            <input type="text" class="form-control" id="resultado11" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Valor de y</label>
+                            <input type="text" class="form-control" id="resultado12" placeholder="Resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular13()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -336,15 +453,21 @@
                         <h3 class="mb-0">Problema 14</h3>
                         <div class="subheading mb-3">Programa para determinar si un año es bisiesto
                         </div>
-                        <div class="container">
-                            <h5> Año <input id="bisiesto" placeholder="año bisiesto" /></h5>
-                            <h5> Calcular si es bisiesto</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado13" placeholder="resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular14()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Año</label>
+                            <input type="text" class="form-control" id="bisiesto" placeholder="Ingrese el año aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Calculando si es bisiesto</label>
+                            <input type="text" class="form-control" id="resultado13" placeholder="resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular14()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -354,16 +477,26 @@
                         <h3 class="mb-0">Problema 15</h3>
                         <div class="subheading mb-3">Programa para calcular el numero de dias de un mes
                         </div>
-                        <div class="container">
-                            <h5> Mes <input id="mess" placeholder="Ingrese el mes" /></h5>
-                            <h5> Año <input id="anoo" placeholder="Ingrese el año" /></h5>
-                            <h5> Calcular el numero de dias del mes</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado14" placeholder="resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular15()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Mes</label>
+                            <input type="text" class="form-control" id="mess" placeholder="Ingrese el mes" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Año</label>
+                            <input type="text" class="form-control" id="anoo" placeholder="Ingrese el año" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Calculando el numero de dias del mes</label>
+                            <input type="text" class="form-control" id="resultado14" placeholder="resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular15()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -373,18 +506,37 @@
                         <h3 class="mb-0">Problema 16</h3>
                         <div class="subheading mb-3">Programa para calcular el salario neto semanal
                         </div>
-                        <div class="container">
-                            <h5> Valor hora <input id="valorhora" placeholder="Valor hora" /></h5>
-                            <h5> Horas semanales <input id="horassemana" placeholder="Ingrese las horas" /></h5>
-                            <h5> Horas extras <input id="horasextra" placeholder="Ingrese las horas" /></h5>
-                            <h5> Impuestos <input id="impuestos" placeholder="¿Aplica o no Aplica?" disabled /></h5>
-                            <h5> Salario del trabajador</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado15" placeholder="resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular16()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Valor hora trabajada</label>
+                            <input type="text" class="form-control" id="valorhora" placeholder="Valor hora" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Horas semanales trabajadas</label>
+                            <input type="text" class="form-control" id="horassemana" placeholder="Ingrese las horas" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Horas extras trabajadas</label>
+                            <input type="text" class="form-control" id="horasextra" placeholder="Ingrese las horas" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Impuestos</label>
+                            <input type="text" class="form-control" id="impuestos" placeholder="¿Aplica o no Aplica?"
+                                disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Salario del trabajador</label>
+                            <input type="text" class="form-control" id="resultado15" placeholder="resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular16()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -394,25 +546,71 @@
                         <h3 class="mb-0">Problema 17</h3>
                         <div class="subheading mb-3">Programa para obtener el cambio optimo
                         </div>
-                        <div class="container">
-                            <h5> Valor a descambiar <input id="monto" placeholder="Ingrese el monto" /></h5>
-                            <h5> Cambio mas optimo</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado16" placeholder="billetes de 100000" disabled /></div>
-                                <div class="col-md-4"><input id="resultado17" placeholder="billetes de 50000" disabled /></div>
-                                <div class="col-md-4"><input id="resultado18" placeholder="billetes de 20000" disabled /></div>
-                                <div class="col-md-4"><input id="resultado19" placeholder="billetes de 10000" disabled /></div>
-                                <div class="col-md-4"><input id="resultado20" placeholder="billetes de 5000" disabled /></div>
-                                <div class="col-md-4"><input id="resultado21" placeholder="billetes de 2000" disabled /></div>
-                                <div class="col-md-4"><input id="resultado22" placeholder="billetes de 1000" disabled /></div>
-                                <div class="col-md-4"><input id="resultado23" placeholder="monedas de 500" disabled /></div>
-                                <div class="col-md-4"><input id="resultado24" placeholder="monedas de 200" disabled /></div>
-                                <div class="col-md-4"><input id="resultado25" placeholder="monedas de 100" disabled /></div>
-                                <div class="col-md-4"><input id="resultado26" placeholder="monedas de 50" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="calcular17()">Calcular</button></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Valor a descambiar</label>
+                            <input type="text" class="form-control" id="monto" placeholder="Ingrese el monto" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">billetes de 100000</label>
+                            <input type="text" class="form-control" id="resultado16" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">billetes de 50000</label>
+                            <input type="text" class="form-control" id="resultado17" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">billetes de 20000</label>
+                            <input type="text" class="form-control" id="resultado18" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">billetes de 10000</label>
+                            <input type="text" class="form-control" id="resultado19" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">billetes de 5000</label>
+                            <input type="text" class="form-control" id="resultado20" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">billetes de 2000</label>
+                            <input type="text" class="form-control" id="resultado21" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">billetes de 1000</label>
+                            <input type="text" class="form-control" id="resultado22" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">monedas de 500</label>
+                            <input type="text" class="form-control" id="resultado23" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">monedas de 200</label>
+                            <input type="text" class="form-control" id="resultado24" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">monedas de 100</label>
+                            <input type="text" class="form-control" id="resultado25" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">monedas de 50</label>
+                            <input type="text" class="form-control" id="resultado26" placeholder="resultado" disabled />
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular17()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>
@@ -420,17 +618,21 @@
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
                         <h3 class="mb-0">Problema 18</h3>
-                        <div class="subheading mb-3">Programa para determinar si el numero introducido por teclado es
-                            positivo, igual a cero o negativo
+                        <div class="subheading mb-3">Programa que verifica numeros
+                            positivos, igual a cero o negativos
                         </div>
-                        <div class="container">
-                            <h5> Numero <input id="numerof" onkeyup="calcular18()" placeholder="Ingrese el numero aquí" /></h5>
-                            <h5> El numero presionado es</h5>
-                            <div class="row">
-                                <div class="col-md-4"><input id="resultado27" placeholder="resultado" disabled /></div>
-                                <div class="col-md-12"><br></div>
-                                <div class="col-md-2"><button onClick="borrar()">Borrar</button></div>
-                            </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="numerof" onkeyup="calcular18()" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">El numero presionado es</label>
+                            <input type="text" class="form-control" id="resultado27" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                     </div>
                 </div>

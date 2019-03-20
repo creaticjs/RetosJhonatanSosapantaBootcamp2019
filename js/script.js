@@ -417,7 +417,7 @@ function calcular16() {
     var horass = parseInt(horassemana);
     var horasextra = parseInt(horasextra);
 
-    if (horass < 40) {
+    if (horass <= 40) {
         var resultado = horass * vhora;
         if (resultado < (vhora * 40)) {
             document.getElementById('resultado15').value = resultado;
@@ -426,9 +426,7 @@ function calcular16() {
     }
 
     if (horass > 40) {
-
         var resultado = (horass * vhora) + ((horasextra * vhora * 50)/100);
-
         if (resultado > (vhora * 40)) {
             var resultado2 = resultado + ((resultado * 10) / 100);
             document.getElementById('resultado15').value = resultado2;

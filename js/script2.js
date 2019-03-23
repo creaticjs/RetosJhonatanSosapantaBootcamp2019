@@ -37,11 +37,23 @@ function calcular2() {
 function calcular3() {
     debugger
     var valorN = parseInt(document.getElementById('valorN').value);
+    valorNarray = [];
 
-    // for ( var i=1; i<=valorN; i++ ) {
-        var inputN = document.createElement('<label for="full_name_id" class="control-label"> N </label><input type="text" class="form-control" id="n1" placeholder="Resultado">');
-        document.getElementById("inputN").appendChild(inputN)
-    // }
+    for ( var i=1; i<=valorN; i++ ) {
+        var inputN = document.createElement("input");
+        inputN.type = "number";
+        inputN.placeholder = "Ingrese aquí el numero" + i;
+        inputN.id = "n" + i;
+        inputN.className = "form-control";
+ 
+        var label = document.getElementById("inputN").appendChild(document.createElement("label"));
+        label.className = "control-label";
+        label.innerHTML = "N" + i;
+        document.getElementById("inputN").appendChild(inputN);
+        document.getElementById("inputN").appendChild(document.createElement("br"));
+    }
+
+
   
 }
 

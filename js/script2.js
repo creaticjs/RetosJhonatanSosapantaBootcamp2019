@@ -119,15 +119,15 @@ function calcular5() {
 
 function calcular6() {
     var valN = parseInt(document.getElementById('valN').value);
-    var array1 = [4,9,2,3,5,7,8,1,6];
-    var array2 = [11,24,7,20,3,4,12,25,8,16,17,5,13,21,9,10,18,1,14,22,23,6,19,2,15];
+    var array1 = [4, 9, 2, 3, 5, 7, 8, 1, 6];
+    var array2 = [11, 24, 7, 20, 3, 4, 12, 25, 8, 16, 17, 5, 13, 21, 9, 10, 18, 1, 14, 22, 23, 6, 19, 2, 15];
 
     if (valN === 3 || valN === 5 || valN === 7 || valN === 9 || valN === 11) {
         var body = document.getElementById("cuadromagico");
         var tabla = document.createElement("table");
         var tblBody = document.createElement("tbody");
         var cont2 = 0;
-        if(valN === 3){
+        if (valN === 3) {
             for (var i = 0; i < valN; i++) {
                 var hilera = document.createElement("tr");
                 for (var j = 0; j < valN; j++) {
@@ -140,7 +140,7 @@ function calcular6() {
                 tblBody.appendChild(hilera);
             }
         }
-        if(valN === 5){
+        if (valN === 5) {
             for (var i = 0; i < valN; i++) {
                 var hilera = document.createElement("tr");
                 for (var j = 0; j < valN; j++) {
@@ -165,6 +165,85 @@ function calcular6() {
         document.getElementById("cuadromagico").appendChild(resultado);
     }
 }
+
+function calcular7() {
+    var numPerfecto = 5;
+    var arraynum = [];
+
+    for (var i = 1; i <= numPerfecto; i++) {
+        if ((Math.pow(2, (i)) - 1) % i === 1) {
+            var numeroPerfecto = Math.pow(2, (i - 1)) * (Math.pow(2, (i)) - 1);
+            arraynum.push(numeroPerfecto);
+        } else {
+            console.log("Numero no es perfecto");
+        }
+    }
+
+    var primerNum = arraynum[0];
+    var segundoNum = arraynum[1];
+    var tercerNum = arraynum[2];
+    document.getElementById('resultado7').value = "Primero: " + primerNum + ", " + "Segundo: " + segundoNum + " y " + "Tercero: " + tercerNum;
+}
+
+function calcular8() {
+    var valx = parseInt(document.getElementById('valx').value);
+    var suma = 0;
+    var total = 0;
+
+    for (var i = 1; i <= 100; i++) {
+        var numeroSuma = Math.pow(valx, (i + 1)) / (this.factori(i));
+        total = total + numeroSuma;
+    }
+
+    suma = 1 + total;
+    document.getElementById('resultado8').value = suma;
+}
+
+function factori(j) {
+    var factorial = 1;
+    for (var i = 1; i <= j; i++) {
+        factorial *= i;
+    }
+    return factorial;
+}
+
+function calcular10() {
+    
+    a = Math.abs(parseInt(document.getElementById('valA').value));
+    b = Math.abs(parseInt(document.getElementById('valB').value));
+    var i1 = Math.max(a, b);
+    var i2 = Math.min(a, b);
+    var iaux;
+
+    do {
+        iaux = i2;
+        i2 = i1 % i2;
+        i1 = iaux;
+    } while (i2 !== 0);
+
+    document.getElementById('resultado10').value = i1;
+}
+
+function calcular11(){
+    var numP = parseInt(document.getElementById('numP').value);
+    var array = [1,2,3,4,5,6,7,8,9,10,11];
+    var resultado = [];
+    var resultado2 = 0;
+
+    for(var i=0; i < array.length; i++){
+        resultado2 = numP % array[i];
+        resultado.push(resultado2);
+    }
+   
+    var resul = resultado.filter(number => number < 1 );
+
+    if(resul.length < 3){
+        document.getElementById('resultado11').value = "Es primo";
+    }else{
+        document.getElementById('resultado11').value = "No es primo";
+    }
+    
+ }
 
 function borrar() {
     location.reload();

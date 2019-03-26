@@ -313,7 +313,7 @@
                         <div class="form-group">
                             <!-- Full Name -->
                             <label for="full_name_id" class="control-label">Numero</label>
-                            <input type="text" class="form-control" id="numP" placeholder="Ingrese el numero aquí"/>
+                            <input type="text" class="form-control" id="numP"  onkeyup="calcular11()" placeholder="Ingrese el numero aquí"/>
                         </div>
                         <div class="form-group">
                             <!-- Full Name -->
@@ -322,7 +322,6 @@
                         </div>
                         <div class="form-group">
                             <!-- Submit Button -->
-                            <button class="btn btn-secondary" onClick="calcular11()">Calcular</button>
                             <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
                         </div>
                         <div class="col-md-12"><br></div>
@@ -331,6 +330,162 @@
                         </div>
                     </div>
                 </div>
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 12</h3>
+                        <div class="subheading mb-3">Programa para calcular la siguiente serie
+                        </div>
+                        <h5> Serie</h5>
+                        <h5> <span class="text-primary">1/1 + 1/2 + ... + 1/N</span> </h5>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="numS" onkeyup="calcular12()" placeholder="Ingrese el numero aquí"/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Suma de la serie</label>
+                            <input type="text" class="form-control" id="resultado12" placeholder="Resultado" disabled/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group" id="cuadromagico">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 13</h3>
+                        <div class="subheading mb-3">Programa para calcular la siguiente serie
+                        </div>
+                        <h5> Serie</h5>
+                        <h5> <span class="text-primary">1/2 + 2/2^2 + 3/2^3 ... + n/2^n</span> </h5>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="numS2" onkeyup="calcular13()" placeholder="Ingrese el numero aquí"/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Suma de la serie</label>
+                            <input type="text" class="form-control" id="resultado13" placeholder="Resultado" disabled/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
+                        </div>
+                        <div class="col-md-12"><br></div>
+                        <div class="form-group" id="cuadromagico">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 14</h3>
+                        <div class="subheading mb-3">Programa para vizualizar la siguiente figura
+                        </div>
+                        <h5> Figura</h5>
+                        <h5> <span class="text-primary">*</span> </h5>
+                        <h5> <span class="text-primary">**</span> </h5>
+                        <h5> <span class="text-primary">***</span> </h5>
+                        <h5> <span class="text-primary">****</span> </h5>
+                        <h5> <span class="text-primary">*****</span> </h5>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero de lineas</label>
+                            <input type="text" class="form-control" id="numF" placeholder="Ingrese el numero aquí"/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular14()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
+                        </div>
+                        <div class="form-group" id="figura">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 15</h3>
+                        <div class="subheading mb-3">Programa para encontrar los numeros perfectos hasta un numero dado
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="numD" placeholder="Ingrese el numero aquí"/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero perfectos</label>
+                            <input type="text" class="form-control" id="resultado15" placeholder="Resultado" disabled/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular15()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
+                        </div>
+                        <div class="form-group" id="figura">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 16</h3>
+                        <div class="subheading mb-3">Programa para encontrar los numeros perfectos hasta un numero dado
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="numD" placeholder="Ingrese el numero aquí"/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero perfectos</label>
+                            <input type="text" class="form-control" id="resultado15" placeholder="Resultado" disabled/>
+                        </div>
+                        <div class="form-group">
+                            <!-- Submit Button -->
+                            <button class="btn btn-secondary" onClick="calcular15()">Calcular</button>
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
+                        </div>
+                        <div class="form-group" id="figura">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Problema 17</h3>
+                        <div class="subheading mb-3">Programa que verifica numeros
+                            positivos, igual a cero o negativos
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">Numero</label>
+                            <input type="text" class="form-control" id="numerof" onkeyup="calcular17()" placeholder="Ingrese el numero aquí" />
+                        </div>
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <label for="full_name_id" class="control-label">El numero presionado es</label>
+                            <input type="text" class="form-control" id="resultado17" placeholder="resultado" disabled />
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-secondary" onClick="borrar()">Borrar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </div>
         </section>
 

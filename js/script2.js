@@ -208,7 +208,7 @@ function factori(j) {
 }
 
 function calcular10() {
-    
+
     a = Math.abs(parseInt(document.getElementById('valA').value));
     b = Math.abs(parseInt(document.getElementById('valB').value));
     var i1 = Math.max(a, b);
@@ -224,25 +224,101 @@ function calcular10() {
     document.getElementById('resultado10').value = i1;
 }
 
-function calcular11(){
+function calcular11() {
     var numP = parseInt(document.getElementById('numP').value);
-    var array = [1,2,3,4,5,6,7,8,9,10,11];
+    var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     var resultado = [];
     var resultado2 = 0;
 
-    for(var i=0; i < array.length; i++){
+    for (var i = 0; i < array.length; i++) {
         resultado2 = numP % array[i];
         resultado.push(resultado2);
     }
-   
-    var resul = resultado.filter(number => number < 1 );
 
-    if(resul.length < 3){
+    var resul = resultado.filter(number => number < 1);
+
+    if (resul.length < 3) {
         document.getElementById('resultado11').value = "Es primo";
-    }else{
+    } else {
         document.getElementById('resultado11').value = "No es primo";
     }
-    
+
+}
+
+function calcular12() {
+    var numS = parseInt(document.getElementById('numS').value);
+    var resultado = 0;
+
+    for (var i = 1; i <= numS; i++) {
+        resultado = resultado + (1 / i);
+    }
+
+    document.getElementById('resultado12').value = resultado;
+
+}
+
+function calcular13() {
+    var numS2 = parseInt(document.getElementById('numS2').value);
+    var resultado = 0;
+
+    for (var i = 1; i <= numS2; i++) {
+        resultado = resultado + (i / Math.pow(2, i));
+    }
+
+    document.getElementById('resultado13').value = resultado;
+
+}
+
+function calcular14() {
+    var numF = parseInt(document.getElementById('numF').value);
+
+    var body = document.getElementById("figura");
+    var h5 = document.createElement("h5");
+    var span = document.createElement("span");
+
+    for (var i = 0; i < numF; i++) {
+        var textoCelda = document.createTextNode("*");
+        span.appendChild(textoCelda);
+        h5.appendChild(span);
+    }
+
+    body.appendChild(h5);
+    span.setAttribute("class", "text-primary");
+
+}
+
+function calcular15() {
+    var numPerfecto = parseInt(document.getElementById('numD').value);;
+    var arraynum = [];
+    var cont = 0;
+
+    for (var i = 1; i <= numPerfecto; i++) {
+        if ((Math.pow(2, (i)) - 1) % i === 1) {
+            var numeroPerfecto = Math.pow(2, (i - 1)) * (Math.pow(2, (i)) - 1);
+            arraynum.push(numeroPerfecto);
+        } else {
+            console.log("Numero no es perfecto");
+        }
+    }
+    document.getElementById('resultado15').value = arraynum;
+}
+
+function calcular16() {
+   
+}
+
+function calcular17() {
+    var numero = document.getElementById('numerof').value;
+    var num = parseInt(numero);
+    if(num > 0){
+     document.getElementById('resultado17').value = "Positivo";
+    }
+    if(num === 0){
+     document.getElementById('resultado17').value = "Igual a cero";
+    }
+    if(num < 0){
+     document.getElementById('resultado17').value = "Negativo";
+    }
  }
 
 function borrar() {

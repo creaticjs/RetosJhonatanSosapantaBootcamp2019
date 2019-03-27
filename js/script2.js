@@ -270,21 +270,20 @@ function calcular13() {
 }
 
 function calcular14() {
+
     var numF = parseInt(document.getElementById('numF').value);
+    var resultado = '';
+    var salto = '<br>'
 
-    var body = document.getElementById("figura");
-    var h5 = document.createElement("h5");
-    var span = document.createElement("span");
-
-    for (var i = 0; i < numF; i++) {
-        var textoCelda = document.createTextNode("*");
-        span.appendChild(textoCelda);
-        h5.appendChild(span);
+    for (var x = 1; x <= numF; x++) {
+        var point = '*'
+        var linePoint = ''
+        for (var j = 1; j <= x; j++) {
+            linePoint += point
+        }
+        result += linePoint + salto;
     }
-
-    body.appendChild(h5);
-    span.setAttribute("class", "text-primary");
-
+    document.getElementById('figura').innerHTML = '<h5>' + resultado + ' </h5>';
 }
 
 function calcular15() {
@@ -304,7 +303,19 @@ function calcular15() {
 }
 
 function calcular16() {
-   
+    var numPq = parseInt(document.getElementById("numPq").value);
+    var sumnum = 0;
+
+    for (var i = 0; sumnum <= numPq; i++) {
+        sumnum = sumnum + i;
+        if(numPq==1 || numPq==0){
+            document.getElementById('resultado16').value = "El natural mas pequeño es: " + numPq;
+            return
+         } else if (sumnum > numPq) {
+            document.getElementById('resultado16').value = "El natural mas pequeño es: " + i;
+            return
+        } 
+    }
 }
 
 function calcular17() {

@@ -281,9 +281,9 @@ function calcular14() {
         for (var j = 1; j <= x; j++) {
             linePoint += point
         }
-        result += linePoint + salto;
+        resultado += linePoint + salto;
     }
-    document.getElementById('figura').innerHTML = '<h5>' + resultado + ' </h5>';
+    document.getElementById('figura').innerHTML = '<span class="text-primary">' + resultado + ' </span>';
 }
 
 function calcular15() {

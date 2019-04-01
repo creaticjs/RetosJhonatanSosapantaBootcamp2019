@@ -14,81 +14,52 @@ function getP(url) {
         xhttp.send();
     });
 }
-//   getP("https://swapi.co/api/people/1")
-//     .then(function(data) {
-//       console.log(data);
-//       return getP("https://swapi.co/api/people/2");
-//     })
-//     .then(function(data2) {
-//       console.log(data2);
-//     })
-//     .catch(function() {
-//       console.error(error);
-//     });
-async function getAllDatos() {
-    var arrUrl = [
-        "https://swapi.co/api/people/1",
-        "https://swapi.co/api/people/2",
-        "https://swapi.co/api/people/3",
-        "https://swapi.co/api/people/4",
-        "https://swapi.co/api/people/5"
-    ];
-    var promesas = arrUrl.map(function (url) {
-        return getP(url);
-    });
-    try {
-        var personajes = await Promise.all(promesas);
-        console.log(personajes);
-        debugger
-        var conte = document.getElementById("contenedor");
-        conte.innerHTML = "";
-        var auxHtlm = "";
-        personajes.forEach(function (p, i) {
-            auxHtlm += "<div class='col-lg-4 col-sm-6 portfolio-item'>" + "<div class='h-80'>" + "<a href='" + array[i].url + "'><img class='card-img-top' src='" + array[i].image.medium + "' alt=''></a>" +
-                "<div class='card-body letrasBlancas'>" + "<h4 class='card-title'></h4>" + "<a>" + "<strong class='letrasBlancas'>" + array[i].name + "</strong>" + "</a>" + "<p class='card-text'>" + res + "</p>"
-                + "<a href='' class='btn btn-primary'>Detalle</a>" + "</div>" + "</div>" + "</div>"
+
+getP("https://pokeapi.co/api/v2/pokemon/").then(function (data) {
+    var arrayURL = [];
+    for (var i = 0; i < data.results.length; i++) {
+        arrayURL.push(data.results[i].url);
+    }
+    return arrayURL;
+}).then(getAllDatos)
+
+async function getAllDatos(arrayurl) {
+
+    
+    if(arrayurl.length > 0){
+        var promesas = arrayurl.map(function (url) {
+            return getP(url);
         });
-        conte.innerHTML = auxHtlm;
-    } catch (error) { }
+        console.log(promesas)
+        try {
+            var personajes = await Promise.all(promesas);
+            var conte = document.getElementById("contenedor");
+            conte.innerHTML = "";
+            var auxHtlm = "";
+            personajes.forEach(function (p, i) {
+                auxHtlm += `<div class="card ml-4 mb-5" style="width: 18rem;">
+                              <img class="card-img-top" src=${p.sprites.front_default} alt="Card image cap" width="50" height="200"> 
+                                <div class="card-body">
+                                   <h5 class="card-title">${p.name}</h5>
+                                   <p class="card-text">Some quick example text to build on the card title and
+                                       make up the bulk of the card's content.</p>
+                                    <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Vestibulum at eros</li>
+                                    </ul>
+                                   <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Mas información</a>
+                                </div>
+                            </div>`
+            });
+            conte.innerHTML = auxHtlm;
+            $("#cargando").hide();
+        } catch (error) { }
+    }else{
+        $("#cargando").show();
+    }
+    
 }
 function haceralgo(par) {
     console.log(par);
 }
-
-// //Variables y array
-// var personajes = [];
-
-// //Buscando informacion de las urls
-// function getP(url, callback) {
-//     var httpX = new XMLHttpRequest();
-//     httpX.onload = function () {
-//         if (callback) {
-//             callback(JSON.parse(this.responseText));
-//         }
-//     }
-//     httpX.onerror = function () {
-//         console.log(Error('Error'));
-//     }
-//     httpX.open('GET', url, true);
-//     httpX.send();
-// }
-
-// //Buscar toda la informacion con promesas
-// getP('https://pokeapi.co/api/v2/pokemon/', function (data) {
-
-//     personajes.push(data);
-
-//     var cont = document.getElementById("contenedor");
-//     var series = "";
-
-//     personajes.forEach(item => {
-//         let array = Array.from(item)
-//         for (var i = 0; i < array.length; i++) {
-//             var res = array[i].summary.slice(0, 150);
-//             series += "<div class='col-lg-4 col-sm-6 portfolio-item'>" + "<div class='h-80'>" + "<a href='" + array[i].url + "'><img class='card-img-top' src='" + array[i].image.medium + "' alt=''></a>" +
-//                 "<div class='card-body letrasBlancas'>" + "<h4 class='card-title'></h4>" + "<a>" + "<strong class='letrasBlancas'>" + array[i].name + "</strong>" + "</a>" + "<p class='card-text'>" + res + "</p>" 
-//                 + "<a href='' class='btn btn-primary'>Detalle</a>"+ "</div>" + "</div>" + "</div>"
-//         }
-//         cont.innerHTML = series;
-//     });
-// });

@@ -20,8 +20,11 @@ getP("https://pokeapi.co/api/v2/pokemon/").then(function (data) {
     for (var i = 0; i < data.results.length; i++) {
         arrayURL.push(data.results[i].url);
     }
-    return arrayURL;
-}).then(getAllDatos)
+    getAllDatos(arrayURL);
+    return getP("https://pokeapi.co/api/v2/pokemon/");
+}).then(function(listasPokemon){
+    paginador(listasPokemon);
+})
 
 async function getAllDatos(arrayurl) {
 
@@ -41,12 +44,11 @@ async function getAllDatos(arrayurl) {
                               <img class="card-img-top" src=${p.sprites.front_default} alt="Card image cap" width="50" height="200"> 
                                 <div class="card-body">
                                    <h5 class="card-title">${p.name}</h5>
-                                   <p class="card-text">Some quick example text to build on the card title and
-                                       make up the bulk of the card's content.</p>
+                                   <p class="card-text">${p.location_area_encounters}</p>
                                     <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Cras justo odio</li>
-                                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                                    <li class="list-group-item">Vestibulum at eros</li>
+                                    <li class="list-group-item">Altura: ${p.height}</li>
+                                    <li class="list-group-item">Anchura: ${p.weight}</li>
+                                    <li class="list-group-item">Experiencia base: ${p.base_experience}</li>
                                     </ul>
                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Mas información</a>
                                 </div>
@@ -58,8 +60,40 @@ async function getAllDatos(arrayurl) {
     }else{
         $("#cargando").show();
     }
-    
 }
-function haceralgo(par) {
-    console.log(par);
+
+async function paginador(listasPokemon) {
+
+    debugger
+    // if(arrayurl.length > 0){
+    //     var promesas = arrayurl.map(function (url) {
+    //         return getP(url);
+    //     });
+    //     console.log(promesas)
+    //     try {
+    //         var personajes = await Promise.all(promesas);
+    //         var conte = document.getElementById("contenedor");
+    //         conte.innerHTML = "";
+    //         var auxHtlm = "";
+    //         personajes.forEach(function (p, i) {
+    //             auxHtlm += `<div class="card ml-4 mb-5" style="width: 18rem;">
+    //                           <img class="card-img-top" src=${p.sprites.front_default} alt="Card image cap" width="50" height="200"> 
+    //                             <div class="card-body">
+    //                                <h5 class="card-title">${p.name}</h5>
+    //                                <p class="card-text">${p.location_area_encounters}</p>
+    //                                 <ul class="list-group list-group-flush">
+    //                                 <li class="list-group-item">Altura: ${p.height}</li>
+    //                                 <li class="list-group-item">Anchura: ${p.weight}</li>
+    //                                 <li class="list-group-item">Experiencia base: ${p.base_experience}</li>
+    //                                 </ul>
+    //                                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Mas información</a>
+    //                             </div>
+    //                         </div>`
+    //         });
+    //         conte.innerHTML = auxHtlm;
+    //         $("#cargando").hide();
+    //     } catch (error) { }
+    // }else{
+    //     $("#cargando").show();
+    // }
 }

@@ -104,11 +104,12 @@ async function getAllDatos(arrayurl) {
         $("#cargando").hide();
         $("#content").show();
         var promesas = arrayurl.map(function (url) {
+
             return getP(url);
         });
-        console.log(promesas)
         try {
             var personajes = await Promise.all(promesas);
+            // detalle(personajes);
             todosPokemons = personajes;
             var conte = document.getElementById("contenido1");
             conte.innerHTML = "";
@@ -174,14 +175,28 @@ function searchPoke() {
 
 }
 
-function detalle(){
+// function detalle(url) {
 
-    // getP(pagina).then(function (data) {
-    //     var arrayURL = [];
-    //     for (var i = 0; i < data.results.length; i++) {
-    //         arrayURL.push(data.results[i].url);
-    //     }
-    //     getAllDatos(arrayURL);
-    // })
-
-}
+//     debugger
+//     var conte = document.getElementById("contenido3");
+//     conte.innerHTML = "";
+//     var auxHtlm = "";
+//     query1.forEach(function (p, i) {
+//         auxHtlm += `<div class="modal-header">
+//                        <img src="/img/pokebola.png" width="50" height="50" class="mr-5">
+//                        <h4>Bulbasor</h4>
+//                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+//                     </div>
+//                     <div class="modal-body">
+//                        <p>This is a small modal.</p>
+//                        <ul class="list-group list-group-flush">
+//                          <li class="list-group-item">Cras justo odio</li>
+//                          <li class="list-group-item">Dapibus ac facilisis in</li>
+//                          </ul>
+//                     </div>
+//                     <div class="modal-footer">
+//                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+//                     </div>`
+//     });
+//     conte.innerHTML = auxHtlm;
+// }

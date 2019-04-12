@@ -246,3 +246,9 @@ body {
     border-radius: 50%;
     color:white;
     }
+
+    .pagina{
+        cursor: pointer;
+        color: #998EFA;
+        border-color: #333;
+    }

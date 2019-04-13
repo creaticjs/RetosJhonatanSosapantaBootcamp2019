@@ -104,12 +104,11 @@ async function getAllDatos(arrayurl) {
         $("#cargando").hide();
         $("#content").show();
         var promesas = arrayurl.map(function (url) {
-
             return getP(url);
         });
         try {
             var personajes = await Promise.all(promesas);
-            // detalle(personajes);
+            detalle(personajes);
             todosPokemons = personajes;
             var conte = document.getElementById("contenido1");
             conte.innerHTML = "";
@@ -124,7 +123,7 @@ async function getAllDatos(arrayurl) {
                                     <li class="list-group-item">Anchura: ${p.weight}</li>
                                     <li class="list-group-item">Experiencia base: ${p.base_experience}</li>
                                     </ul>
-                                   <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Mas información</a>
+                                   <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal${i + 1}">Mas información</a>
                                 </div>
                             </div>`
             });
@@ -166,7 +165,7 @@ function searchPoke() {
                                             <li class="list-group-item">Anchura: ${p.weight}</li>
                                             <li class="list-group-item">Experiencia base: ${p.base_experience}</li>
                                             </ul>
-                                           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Mas información</a>
+                                           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal${i + 1}">Mas información</a>
                                         </div>
                                     </div>`
         });
@@ -175,28 +174,49 @@ function searchPoke() {
 
 }
 
-// function detalle(url) {
+async function detalle(url) {
 
-//     debugger
-//     var conte = document.getElementById("contenido3");
-//     conte.innerHTML = "";
-//     var auxHtlm = "";
-//     query1.forEach(function (p, i) {
-//         auxHtlm += `<div class="modal-header">
-//                        <img src="/img/pokebola.png" width="50" height="50" class="mr-5">
-//                        <h4>Bulbasor</h4>
-//                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-//                     </div>
-//                     <div class="modal-body">
-//                        <p>This is a small modal.</p>
-//                        <ul class="list-group list-group-flush">
-//                          <li class="list-group-item">Cras justo odio</li>
-//                          <li class="list-group-item">Dapibus ac facilisis in</li>
-//                          </ul>
-//                     </div>
-//                     <div class="modal-footer">
-//                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-//                     </div>`
-//     });
-//     conte.innerHTML = auxHtlm;
-// }
+
+    var url3 = [];
+    for (var i = 0; i < url.length; i++) {
+        var url2 = url[i].species.url;
+        url3.push(getP(url2));
+    }
+
+    try {
+        var personajes = await Promise.all(url3);
+        console.log(personajes);
+        var conte = document.getElementById("modal");
+        conte.innerHTML = "";
+        var auxHtlm = "";
+        personajes.forEach(function (p, i) {
+            auxHtlm += `<div class="modal fade" id="myModal${i + 1}" role="dialog">
+                       <div class="modal-dialog modal-sm">
+                           <div class="modal-content">
+                               <div class="modal-header">
+                                   <img src="/img/pokebola.png" width="50" height="50" class="mr-5">
+                                   <h4>${p.name}</h4>
+                                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                <p>${p.flavor_text_entries[3].flavor_text}</p>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">Forma: ${p.shape.name}</li>
+                                  <li class="list-group-item">Tasa de captura: ${p.capture_rate}</li>
+                                  <li class="list-group-item">Color: ${p.color.name}</li>
+                                </ul>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+        });
+        conte.innerHTML = auxHtlm;
+    } catch (error) {
+        $("#cargando").show();
+        $("#content").hide();
+    }
+
+}

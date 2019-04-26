@@ -71,7 +71,6 @@
                     <br>
                     <br>
                     <br>
-                    <!-- <super-componente v-for="estudiante in estudiantes" :nombre="estudiante.nombre" ></super-componente> -->
                     <table class="table table-responsive table-bordered">
                         <thead>
                             <tr>
@@ -94,8 +93,8 @@
                             </tr>
                         </tbody>
                     </table>
-                    <!-- <div v-html="HTMLcontent">
-                    </div> -->
+                    <!-- <input type="text" v-model="resultado"> -->
+                    <super-componente v-bind:res="resultado"></super-componente>
                     <template>
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -130,8 +129,7 @@
                                     </div>
                                   </div>
                     </template>    
-
-                </div>
+              </div>
         </section>
 
     </div>

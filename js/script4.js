@@ -1,33 +1,28 @@
 Vue.component("super-componente", {
-  props: ["nombre"],
+  props: ["res"],
   data: function () {
     return {
-      likes: 300
+      // likes: 300,
     };
   },
   methods: {
-    addLike: function () {
-      this.likes++;
-    }
+    // addLike: function () {
+    //   debugger
+    //   this.likes++;
+    // }
   },
-  template: `<tbody>
-  <tr>
-      <td>1</td>
-      <td>mouse</td>
-      <td>5</td>
-      <td>50</td>
-      <td>250</td>
-      <td><button>Eliminar</button></td>
-  </tr>
-  <tr>
-      <td>1</td>
-      <td>mouse</td>
-      <td>5</td>
-      <td>50</td>
-      <td>250</td>
-      <td><button>Eliminar</button></td>
-  </tr>
-</tbody>`
+  template: `<table class="table table-responsive">
+  <thead>
+      <tr>
+          <th style="width: 10%"></th>
+          <th style="width: 30%"></th>
+          <th style="width: 20%"></th>
+          <th style="width: 20%">Total a pagar</th>
+          <th style="width: 20%">{{ res }}</th>
+          <th style="width: 20%"></th>
+      </tr>
+  </thead>
+</table>`
 });
 
 Vue.component("v-select", VueSelect.VueSelect);
@@ -44,55 +39,51 @@ var app = new Vue({
     precio:0,
     nombre:"",
     cantidad:0,
-    cont:4
+    cont:4,
+    resul:0,
+    resultado:"",
+    cont2:0
+    
   },
+  // mounted(){
+  //   // invocar los métodos
+  //   this.totalPagar();
+  //  },
+   created(){
+    // invocar los métodos
+    this.totalPagar();
+   },
   methods: {
-    eliminarProducto(data){//Esta nos abrirá un alert de javascript y si aceptamos borrará la tarea que hemos elegido
+    eliminarProducto(data){
       let me =this;
       let producto_id = data.id;
       if (confirm('¿Seguro que deseas borrar este producto?')) {
           me.productos.splice(producto_id-1,1);
       }
+      this.totalPagar();
     },
     agregarProducto: function () {
       this.nombre
       this.productos.push({ id: this.cont, nombre: this.nombre, cantidad: this.cantidad, precio: this.precio, subtotal: this.cantidad*this.precio });
       this.cont = this.cont + 1;
-      debugger
+      this.totalPagar();
     },
-    // addFactura: function () {
-    //   this.HTMLcontent = `<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    //   <div class="modal-dialog" role="document">
-    //     <div class="modal-content">
-    //       <div class="modal-header">
-    //         <h5 class="modal-title" id="exampleModalLabel">Nuevo producto</h5>
-    //         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    //           <span aria-hidden="true">&times;</span>
-    //         </button>
-    //       </div>
-    //       <div class="modal-body">
-    //         <form>
-    //           <div class="form-group">
-    //             <label for="recipient-name" class="col-form-label">Nombre:</label>
-    //             <input type="text" class="form-control" id="recipient-name">
-    //           </div>
-    //           <div class="form-group">
-    //             <label for="recipient-name" class="col-form-label">Cantidad:</label>
-    //             <input type="text" class="form-control" id="recipient-name">
-    //           </div>
-    //           <div class="form-group">
-    //             <label for="recipient-name" class="col-form-label">Precio:</label>
-    //             <input type="text" class="form-control" id="recipient-name">
-    //           </div>
-    //         </form>
-    //       </div>
-    //       <div class="modal-footer">
-    //         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-    //         <button type="button" class="btn btn-success" v-on:click="agregarProducto()">Agregar producto</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>`;
-    // }
+    totalPagar(){
+      if(this.productos.length < 4 && this.cont2 === 0){
+        for(var i=0;i<this.productos.length; i++){
+          this.resul += parseInt(this.productos[i].subtotal);
+           }
+        this.resultado = this.resul.toString();
+        this.cont2 = this.cont2 + 1;
+        this.resultado
+      }if(this.productos.length >= 4 && this.cont2 >= 1){
+        for(var i=3;i<this.productos.length; i++){
+             this.resul += parseInt(this.productos[i].subtotal);
+           }
+        this.resultado = this.resul.toString();
+        this.resultado;   
+      }
+    }
+    
   }
 });

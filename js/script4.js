@@ -41,14 +41,11 @@ var app = new Vue({
     cantidad:0,
     cont:4,
     resul:0,
+    resul2:0,
     resultado:"",
     cont2:0
     
   },
-  // mounted(){
-  //   // invocar los métodos
-  //   this.totalPagar();
-  //  },
    created(){
     // invocar los métodos
     this.totalPagar();
@@ -60,7 +57,7 @@ var app = new Vue({
       if (confirm('¿Seguro que deseas borrar este producto?')) {
           me.productos.splice(producto_id-1,1);
       }
-      this.totalPagar();
+      this.totalDescuento();
     },
     agregarProducto: function () {
       this.nombre
@@ -81,6 +78,23 @@ var app = new Vue({
              this.resul += parseInt(this.productos[i].subtotal);
            }
         this.resultado = this.resul.toString();
+        this.resultado;   
+      }
+    },
+    totalDescuento(){
+      this.resul2 = 0;
+      if(this.productos.length < 4 && this.cont2 >= 1){
+        for(var i=0;i<this.productos.length; i++){
+          this.resul2 += parseInt(this.productos[i].subtotal);
+           }
+        this.resultado = this.resul2.toString();
+        this.cont2 = this.cont2 + 1;
+        this.resultado
+      }if(this.productos.length >= 4 && this.cont2 > 1){
+        for(var i=3;i<this.productos.length; i++){
+             this.resul2 += parseInt(this.productos[i].subtotal);
+           }
+        this.resultado = this.resul2.toString();
         this.resultado;   
       }
     }

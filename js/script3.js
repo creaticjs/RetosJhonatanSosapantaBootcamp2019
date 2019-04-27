@@ -194,7 +194,7 @@ async function detalle(url) {
                        <div class="modal-dialog modal-sm">
                            <div class="modal-content">
                                <div class="modal-header">
-                                   <img src="/img/pokebola.png" width="50" height="50" class="mr-5">
+                                   <img src="./img/pokebola.png" width="50" height="50" class="mr-5">
                                    <h4>${p.name}</h4>
                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>

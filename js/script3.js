@@ -147,7 +147,7 @@ function searchPoke() {
     }
     else {
         $("#contenedor1").hide();
-        $("#contenedor2").show()
+        $("#contenedor2").show();
 
         var query1 = Enumerable.From(todosPokemons)
             .Where('!!($.name).toLowerCase().match(/^' + $("#search").val() + '/)')

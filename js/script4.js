@@ -1,16 +1,5 @@
 Vue.component("super-componente", {
   props: ["res"],
-  data: function () {
-    return {
-      // likes: 300,
-    };
-  },
-  methods: {
-    // addLike: function () {
-    //   debugger
-    //   this.likes++;
-    // }
-  },
   template: `<table class="table table-responsive">
   <thead>
       <tr>
